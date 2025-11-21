@@ -1,7 +1,5 @@
 # **VivaahaVerse: Full-Stack Wedding Event & Expense Tracker**
 
-App Demo : https://drive.google.com/file/d/1ycPqNp45lYJDRnTMC3vZEWniPtEf3_bM/view?usp=sharing
-
 ## **🌟 Project Overview**
 
 **VivaahaVerse** is a full-stack mobile application designed to help users manage the logistics and finances of a major event, specifically focusing on wedding planning.
