@@ -1,0 +1,48 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.5'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.vivaahaverse'
+version = '0.0.1-SNAPSHOT'
+description = 'Demo project for Spring Boot'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// The correct web starter (Rest APIs)
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// Validation (Required for your @NotNull annotations)
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	// MongoDB Database
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+	// Lombok (Getters/Setters)
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	// Testing (Standard Spring Boot Test suite)
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
